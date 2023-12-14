@@ -1,0 +1,816 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html{
+    scroll-behavior: smooth;
+    height: 100dvh;
+    /*background-color: #ededed;*/
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(85, 180, 85);
+}
+
+.homePage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    top: 30%;
+}
+
+.homePage h1{
+    color: white;
+    font-weight: bold;
+}
+
+.homePage h4{
+    color: white;
+}
+
+.formLoginHomePage{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.form{
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.div-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-logo img{
+    width: 180px;
+}
+
+.div-logo h2{
+    color: black;
+
+}
+
+.div-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-input i{
+    color: white;
+    background-color: rgb(85, 180, 85);
+    padding: 12px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.div-input input{
+    width: 350px;
+    height: 40px;
+    border: 1px lightgray solid; 
+    padding-left: 5px;
+    border-radius: 5px;
+    outline: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.btnLogin{
+    background-color: rgb(85, 180, 85);
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/******************************************************************************DASHBOARD-PAGE************************************************************************/
+
+header{
+    background-color: white;
+    box-shadow: 0px 0px 7px gray;
+    width: inherit;
+    max-width: inherit;
+    position: fixed;
+    top: 0px;
+    z-index: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logo-menu{
+    display: block;
+}
+
+.logo-menu img{
+    width: 190px;
+}
+
+
+.div-icon-user{
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-icon-user img{
+    width: 60px;   
+    background-color: orange;
+    border-radius: 30px;
+    position: relative;
+}
+
+ul{
+    margin: 5px;
+}
+
+.btnAdm ul li{
+    color: black;
+    list-style: none;
+}
+
+.div-icon-bottom{
+    margin: 3px;
+}
+
+.icon-bottom{
+    transform: rotate(-180deg);
+}
+
+
+
+/*********************************************************************************************************DIV-DASHBOARD**************************************************/
+
+.div-dashboard{
+    margin-left: 14%;
+    width: 86%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+.menu-dashboard{
+    background-color: black;
+    height: 100%;
+    width: 14%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: width 300ms;
+}
+
+.menuDad{
+    position: relative;
+    width: auto;
+    display: block;
+}
+
+.menuDad div{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menuDad div li{
+    list-style: none;
+    padding: 5px;
+}
+
+.menu-dashboard div .btn-Menu{
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    transform: translate(-90%,-50%);
+    color: white;
+}
+
+/*******************************************SubMenu-rapport*********************************************/
+
+.subMenu-rapport{
+    display: none;
+}
+
+.subMenu-rapport li{
+    margin: 10px;
+}
+
+.icon-rapport{
+    position: absolute;
+    left: 250px;
+}
+
+/*******************************************SubMenu-paiement*********************************************/
+
+.subMenu-paiement{
+    display: none;
+}
+
+.subMenu-paiement li{
+    margin: 10px;
+}
+
+.icon-paiement{
+    position: absolute;
+    left: 250px;
+}
+
+/*******************************************SubMenu-gestion*********************************************/
+
+.subMenu-gestion{
+    display: none;
+}
+
+.subMenu-gestion li{
+    margin: 10px;
+}
+
+.icon-gestion{
+    position: absolute;
+    left: 250px;
+}
+
+/*******************************************SubMenu-agent*********************************************/
+
+.subMenu-agent{
+    display: none;
+}
+
+.subMenu-agent li{
+    margin: 10px;
+}
+
+.icon-agent{
+    position: absolute;
+    left: 250px;
+}
+
+/*******************************************SubMenu-gestion*********************************************/
+
+.subMenu-resultat{
+    display: none;
+}
+
+.subMenu-resultat li{
+    margin: 10px;
+}
+
+.icon-resultat{
+    position: absolute;
+    left: 250px;
+}
+
+/*******************************************SubMenu-gestion*********************************************/
+
+.subMenu-comptePrepaye{
+    display: none;
+}
+
+.subMenu-comptePrepaye li{
+    margin: 10px;
+}
+
+.icon-comptePrepaye{
+    position: absolute;
+    left: 250px;
+}
+
+
+
+
+/*******************************************Panel-tableauBord************************************************************************************************************/
+.panel-tableauBord{
+    width: 100%;
+    height: 100%;
+    display: none;
+    /*background-color: #ededed;*/
+    padding: 10px;
+    flex-direction: column;
+}
+
+.panel-tableauBord div{
+    margin-bottom: 20px;
+}
+
+
+.Divtext-TableauBord{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+}
+
+.divCard{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.balance-card{
+    width: 390px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #20c997;
+    color: white;
+}
+
+.balance-card i{
+    font-size: 2rem;
+}
+
+
+.utilisateur-card{
+    width: 390px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #ffc107;
+    color: white;
+}
+
+.balance-card i{
+    font-size: 2rem;
+}
+
+
+.prepaye-card{
+    width: 390px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #0dcaf0;
+    color: white;
+}
+
+.prepaye-card i{
+    font-size: 2rem;
+}
+
+.profit-card{
+    width: 390px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: rgb(230, 48, 78);
+    color: white;
+}
+
+
+
+.profit-card i{
+    font-size: 2rem;
+}
+
+
+.divGraph{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+    padding: 10px;
+}
+
+.divGraph .divLineTopx{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 49%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px lightgray;
+    background-color: white;
+    padding: 10px;
+}
+
+.divLineTopx #line_top_x{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.divGraph .divTopx{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 49%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px lightgray;
+    background-color: white;
+    padding: 10px;
+}
+
+.divTopx #top_x_div{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/***********************************************************************************DIV-TABLEAU*****************************************************************/
+
+.divTableau{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+    padding: 15px;
+}
+
+.tableau{
+    background-color: white;
+    width: 73%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px lightgray;
+    padding: 15px;
+    position: relative;
+    top: 0px;
+}
+
+.tableauGraph{
+    width: 25%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px lightgray;
+    position: relative;
+    
+}
+
+#curve_chart{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+    display: block;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    top: 0px;
+  }
+
+  table caption{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    /*background-color: #dddddd;*/
+    background-color: white;
+    border-bottom: 1px black dotted;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: none;
+  }
+
+  table tr:hover{
+    border-collapse: collapse;
+    background-color: gray;
+    color: white;
+    /*background-color: #dddddd;*/
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  td a{
+    text-decoration: none;
+  }
+
+  .btn-actualisation{
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    margin-right: 5px;
+  }
+
+  .btn-delete{
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+  }
+
+/*******************************************Panel-Ticket***********************************************************************************************************/
+.panel-ticket{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: blue;
+}
+
+/*******************************************Panel-Utilisateur**********************************************/
+.panel-utilisateur{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: pink;
+
+}
+
+
+/*************************************************************PANEL RAPPORT FINANCIER*****************************************************************************/
+.panel-RapportFinancier{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: brown;
+
+}
+
+/*************************************************************PANEL PAIEMENT*****************************************************************************/
+.panel-paiement{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: yellow;
+
+}
+
+/*************************************************************PANEL GESTION PRODUIT*****************************************************************************/
+.panel-gestionProduit{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: purple;
+
+}
+
+/*************************************************************PANEL AGENT*****************************************************************************/
+.panel-agent{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightgray;
+
+}
+
+/*************************************************************PANEL RESULTAT*****************************************************************************/
+.panel-resultat{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: green;
+
+}
+
+/*************************************************************PANEL COMPTE PREPAYE*****************************************************************************/
+.panel-comptePrepaye{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: gray;
+
+}
+
+
+
+/*****************************************************************MEDIA QUERIES MAX-WIDTH 600********************************************************************/
+@media only screen and (max-width: 1400px) {
+    .div-dashboard{
+        padding: 30px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .menu-dashboard{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .div-dashboard{
+        padding: 30px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .divCard{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .divCard div{
+        width: 100%;
+    }
+
+    .divGraph{
+        width: 100%;
+        height: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .divLineTopx{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .divLineTopx #line_top_x{
+        width: 100%;
+        display: block;
+    }
+
+    .divTopx{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+    }
+
+    .divTopx #top_x_div{
+        width: 100%;
+    }
+
+
+    .divTableau{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        /*flex-wrap: wrap;*/
+    }
+    
+    .tableau{
+        background-color: white;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        border: none;
+        background-color: white;
+        position: relative;
+        top: 0px;
+        left: 0px;
+      }
+    
+      table caption{
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        /*background-color: #dddddd;*/
+        background-color: white;
+        border-bottom: 1px black dotted;
+      }
+
+      table th{
+        display: none;
+      }
+
+    table tr{
+        display: block;
+    }
+
+    table td{
+        font-size: 14px;
+        display: block;
+    }
+
+    table td a{
+        margin-bottom: 5px;
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
+    
+    .tableauGraph{
+        width: 100%;
+        height: 500px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        position: relative;
+        
+    }
+    
+    #curve_chart{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        border-radius: 15px;
+    }
+    
+
+}
